@@ -80,11 +80,13 @@
 
                 <Button 
                     Text="Calcular" 
-                    Padding="15" />
+                    Padding="15"
+                    Clicked="Cacular_Button"/>
 
                 <Button 
                     Text="Limpiar" 
-                    Padding="15" />
+                    Padding="15" 
+                    Clicked="Limpiar_Button"/>
 
 
             </HorizontalStackLayout>
