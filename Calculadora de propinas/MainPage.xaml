@@ -1,9 +1,197 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Calculadora_de_propinas.MainPage">
+             x:Class="Calculadora_de_propinas.MainPage"
+             Title="Calculadora de Propinas">
+   
+    <ScrollView>
+        <VerticalStackLayout >
 
-    
-    
+
+            <Border 
+                Padding="16" 
+                
+                Margin="20" >
+                <Grid 
+                    RowSpacing="4" 
+                    ColumnSpacing="4">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition  Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition 
+                            Width="130"/>
+                        <ColumnDefinition/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <Label  
+                        Text="Importe del consumo: " 
+                        Margin="10"
+                        VerticalOptions="Center"/>
+                            
+                        
+
+                    <Entry 
+                        Grid.Column="1" 
+                        Margin="10"    
+                        x:Name="ConsumoEntry"
+                        Background="Gray"/>   
+                         
+                           
+                        
+
+                    <Label 
+                        Text="Numero de personas: " 
+                        Grid.Row="1" 
+                        VerticalOptions="Center"/>
+
+                    <Entry 
+                        Grid.Column="1" 
+                        Grid.Row="1" 
+                        Margin="10" 
+                        x:Name="NumPersonaEntry" 
+                        Background="Gray"/>
+
+                    <Label  
+                        Text="Propina (%): " 
+                        Grid.Row="2" 
+                        VerticalOptions="Center"/>
+
+                    <Entry 
+                        Grid.Column="2"
+                        Grid.Row="2" 
+                        Margin="10" 
+                        x:Name="PropinaEntry" 
+                        Background="Gray"/>
+
+                </Grid>
+
+            </Border>
+
+            <HorizontalStackLayout 
+                HorizontalOptions="Center" 
+                Margin="20" 
+                Spacing="50">
+
+                <Button 
+                    Text="Calcular" 
+                    Padding="15" />
+
+                <Button 
+                    Text="Limpiar" 
+                    Padding="15" />
+
+
+            </HorizontalStackLayout>
+
+            <Border 
+                Margin="22">
+
+
+
+                <Border.StrokeShape>
+                    <RoundRectangle 
+                        CornerRadius="10"/>
+                </Border.StrokeShape>
+                <Grid 
+                    Padding="16"  
+                    RowSpacing="8" >
+
+
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label 
+                        Text="Importe de la propina " 
+                        FontSize="Small" />
+                    <Label 
+                        Text="propina por personal" 
+                        Grid.Row="1" 
+                        FontSize="Small"/>
+                    <Label 
+                        Text="importe total " 
+                        Grid.Row="2" 
+                        FontSize="Small"/>
+                    <Label 
+                        Text="imprimir total por persona" 
+                        Grid.Row="3" 
+                        FontSize="Small"/>
+
+                    <Label 
+                        Text="$0 " 
+                        Grid.Column="1" 
+                        FontSize="Small" 
+                        HorizontalOptions="End" 
+                        FontAttributes="Bold" 
+                        x:Name="ImportePropinaOUT"/>
+                    <Label 
+                        Text="$0" 
+                        Grid.Column="1" 
+                        Grid.Row="1" 
+                        FontSize="Small" 
+                        HorizontalOptions="End" 
+                        FontAttributes="Bold" 
+                        x:Name="PersonaPropinaOUT"/>
+                    <Label 
+                        Text="$0 " 
+                        Grid.Column="1" 
+                        Grid.Row="2" 
+                        FontSize="Small" 
+                        HorizontalOptions="End" 
+                        FontAttributes="Bold" 
+                        x:Name="ImporteTotalOUT"/>
+                    <Label 
+                        Text="$0" 
+                        Grid.Column="1" 
+                        Grid.Row="3" 
+                        FontSize="Small" 
+                        HorizontalOptions="End" 
+                        FontAttributes="Bold" 
+                        x:Name="TotalOUT"/>
+
+
+
+
+
+                </Grid>
+
+
+
+
+
+
+            </Border>
+
+
+
+
+
+
+
+
+
+        </VerticalStackLayout>
+
+
+
+    </ScrollView>
+
+
+
 
 </ContentPage>
